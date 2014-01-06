@@ -29,7 +29,7 @@ body {
 	width: 100%;
 	background: #303538 no-repeat center center;
 	background-size: cover;
-	font-family: @font-sans;
+	font-family: @font-brand;
 	position: relative;
 	.sidebar__logo {
 		position: absolute;
@@ -51,27 +51,45 @@ body {
 		width: 100%;
 		max-width: 810px;
 		box-sizing: border-box;
-		padding: @rs @rs @rs @rs*4.5;
+		padding: @rs @rs @rs @rs*1.5;
 		.sidebar__information__title {
-			font-size: @rs;
+			font-size: @rs*1.5;
 			margin: 0;
 			padding: 0;
 			line-height: @rs*1.5;
 			color: @color-white;
 		}
 		.sidebar__information__description {
+			font-family: @font-sans;
 			font-size: @rs/4*3;
 			margin: 0;
 			padding: 0 0;
-			line-height: @rs;
+			line-height: @rs*2;
 			color: @color-white-dark;
 			font-weight: normal;
 		}
+		.sidebar__information__pages {
+			font-family: @font-sans;
+			font-size: @rs/1.3;
+			margin: 0;
+			padding: @rs/2 0;
+			line-height: @rs*2;
+			color: @color-white;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+			a {
+				color: @color-white;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
 		.sidebar__information__footer {
 			padding: 0 0;
 			a {
 				text-decoration: none;
-				color: @color-main;
+				color: @color-white;
 				&:hover {
 					color: @color-main-light;
 				}
@@ -126,7 +144,7 @@ body {
 			font-weight: 800;
 			padding: 0 @rs*4 @rs/2 0;
 			margin: 0;
-			font-family: @font-sans;
+			font-family: @font-brand;
 			a {
 				text-decoration: none;
 				color: @color-black;
@@ -231,6 +249,9 @@ body {
 		border-radius: 50px;
 		background: #fff;
 		transition: box-shadow 0.5s;
+		i {
+			color: @color-white-dark;
+		}
 }
 
 /* The RSS icon, inserted via icon font */
@@ -248,6 +269,9 @@ body {
 .subscribe:hover {
 		box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
 		transition: box-shadow 0.25s;
+		i {
+			color: #50585D;
+		}
 }
 
 .subscribe:hover:before {
@@ -298,7 +322,7 @@ body {
 /** Post **/
 
 .contentpost {
-	padding: @rs*7.5 0 0;
+	padding: @rs*7.5 0;
 	.contentpost__logo {
 		position: absolute;
 		top: 10px;
@@ -306,6 +330,15 @@ body {
 		width: 44px;
 		height: 44px;
 		z-index: 99;
+		font-size: @rs;
+		color: @color-black;
+		font-family: @font-sans;
+		font-weight: 800;
+		a:visited, a:focus, a:active {
+			color: @color-black;
+		}
+	}
+	.contentpost__logo__img_black_background {
 		background-color: @color-black;
 		img {
 			width: 22px;
@@ -396,7 +429,7 @@ body {
 		line-height: @rs*3;
 		padding: @rs 0 @rs*2;
 		margin: 0;
-		font-family: @font-sans;
+		font-family: @font-brand;
 		letter-spacing: -2px;
 		font-weight: 800;
 	}
@@ -441,6 +474,7 @@ body {
 		}
 		
 		h2 {
+				font-family: @font-sans;
 				font-size: @rs*2;
 				line-height: @rs*2;
 				letter-spacing: -1px;
@@ -600,10 +634,19 @@ body {
 			color: @color-white-dark;
 			font-size: @rs*1.4;
 			margin: 0 0 0 @rs;
+			text-decoration: none;
 			transition: color ease 0.3s;
 			&:hover {
 				color: @color-main-dark;
 			}
 		}
+	}
+	.contentpost__content__back {
+		font-family: @font-sans;
+		font-size: @rs*1;
+		color: #111;
+		text-align: center;
+		display: block;
+		text-decoration: none;
 	}
 }
